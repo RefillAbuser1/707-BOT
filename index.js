@@ -35,13 +35,26 @@ bot.on('message', message => {
   if (command === "list") {
      message.channel.sendMessage("Why, what list are you looking for? | ```Hint: There is no list```");
   }
-
+  // New member notification
 bot.on('guildMemberAdd', member => {
   const channel = member.guild.channels.find('name', 'welcome');
   if (!channel) return;
   channel.sendMessage(`${member}, Welcome to PlaySales!`);
 });
-  
+  // Music
+  if (command === "join") {
+    if (message.member.voiceChannel) {
+      message.member.voiceChannel.join()
+        .then(connection => {
+          message.reply('I have successfully connected to the channel!');
+        })
+        .catch(console.log);
+    } else {
+      message.reply('You need to join a voice channel first!');
+    }
+  }
+});
+
 });
 
 bot.login(process.env.BOT_TOKEN);
