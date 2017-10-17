@@ -35,15 +35,9 @@ bot.on('message', message => {
   if (command === "list") {
      message.channel.sendMessage("Why, what list are you looking for? | ```Hint: There is no list```");
   }
-  
-// The ready event is vital, it means that your bot will only start reacting to information
-// from Discord _after_ ready is emitted
-client.on('ready', () => {
-  console.log('I am ready!');
-});
 
 // Create an event listener for new guild members
-client.on('guildMemberAdd', member => {
+bot.on('guildMemberAdd', member => {
   // Send the message to a designated channel on a server:
   const channel = member.guild.channels.find('name', 'bot-log');
   // Do nothing if the channel wasn't found on this server
