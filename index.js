@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
+const fs = require('fs');
 
 const config = require("./config.json");
 
@@ -41,6 +42,7 @@ bot.on('guildMemberAdd', member => {
   if (!channel) return;
   channel.sendMessage(`${member}, Welcome to PlaySales!`);
 });
+  
   // Music
   if (command === "join") {
     if (message.member.voiceChannel) {
