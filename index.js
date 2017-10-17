@@ -50,7 +50,7 @@ bot.on('guildMemberAdd', member => {
         })
         .catch(console.log);
     } else {
-      message.reply('You need to join a voice channel first!');
+      message.channel.sendMessage('You need to join a voice channel first!');
     }
   }
 
