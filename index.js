@@ -6,7 +6,7 @@ const config = require("./config.json");
 bot.on('ready', () => {
   console.log(`Logged in as ${bot.user.tag}!`);
 
-bot.user.setPresence({game: {name: 'prefix: =+ | =+commands', type:0 } });
+bot.user.setPresence({game: {name: 'prefix: !! | !!commands', type:0 } });
 });
  // Prefix settings
 bot.on('message', message => {
@@ -36,14 +36,10 @@ bot.on('message', message => {
      message.channel.sendMessage("Why, what list are you looking for? | ```Hint: There is no list```");
   }
 
-// Create an event listener for new guild members
 bot.on('guildMemberAdd', member => {
-  // Send the message to a designated channel on a server:
   const channel = member.guild.channels.find('name', 'welcome');
-  // Do nothing if the channel wasn't found on this server
   if (!channel) return;
-  // Send the message, mentioning the member
-  channel.sendMessage(`Welcome to the server, ${member}`);
+  channel.sendMessage(`${member}, Welcome to PlaySales!`);
 });
   
 });
