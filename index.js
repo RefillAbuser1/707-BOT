@@ -53,6 +53,6 @@ bot.on('guildMemberAdd', member => {
       message.reply('You need to join a voice channel first!');
     }
   }
-});
 
+});
 bot.login(process.env.BOT_TOKEN);
