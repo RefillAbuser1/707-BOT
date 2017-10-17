@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-const request = require("./request");
 const getYouTubeID = require("/.get-youtube-id");
 const config = require("./config.json");
 
