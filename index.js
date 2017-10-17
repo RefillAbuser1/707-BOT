@@ -31,6 +31,10 @@ bot.on('message', message => {
   if (command === "say") {
     message.channel.sendMessage(args.join(" "));
   }
+  
+  if (command === "list") {
+     message.channel.sendMessage("Why, what list are you looking for? | ```Hint: There is no list```");
+  }
 });
 
 bot.login(process.env.BOT_TOKEN);
