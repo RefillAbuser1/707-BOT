@@ -24,22 +24,21 @@ bot.on('message', message => {
     message.channel.sendMessage(total);
   } 
   if (command === "commands") {
-     message.channel.sendMessage("Commands: say, list | More commands soon! |");
+     message.channel.sendMessage("Commands: say,  | More commands soon! |");
   }
   // list of shit
   if (command === "say") {
     message.channel.sendMessage(args.join(" "));
   }
   
-  if (command === "list") {
-     message.channel.sendMessage("Why, what list are you looking for? | ```Hint: There is no list```");
+  if (command === "website") {
+     message.channel.sendMessage("Website: http://forums.mcservervote.net");
   }
-  // New member notification
-bot.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.find('name', 'welcome');
-  if (!channel) return;
-  channel.sendMessage(`${member}, Welcome to PlaySales!`);
+  
+  if (command === "support") {
+     message.channel.sendMessage("For `support` go to the #support text channel!");
+  }
+  
 });
 
-});
 bot.login(process.env.BOT_TOKEN);
