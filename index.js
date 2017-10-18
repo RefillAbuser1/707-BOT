@@ -36,7 +36,7 @@ bot.on('message', message => {
      message.channel.sendMessage("Website: http://forums.mcservervote.net");
   }
   // Welcomer
-client.on('guildMemberAdd', member => {
+bot.on('guildMemberAdd', member => {
   const channel = member.guild.channels.find('name', 'welcome');
   if (!channel) return;
   channel.send(`${member} Welcome to PlaySales!`);
