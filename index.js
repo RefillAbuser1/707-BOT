@@ -36,13 +36,12 @@ bot.on('message', message => {
   if (command === "website") {
      message.channel.sendMessage("Website: http://forums.mcservervote.net");
   }
-  // Welcomer
-bot.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.find('name', 'bots');
-  if (!channel) return;
-  channel.send(`${member} Welcome to PlaySales!`);
-});
-
+  
+  if (command === "nick") {
+      setName(name) {
+    return this.edit({ name });
+  }
+    
 });
 
 bot.login(process.env.BOT_TOKEN);
