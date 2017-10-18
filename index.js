@@ -25,7 +25,7 @@ bot.on('message', message => {
 
   }
   if (command === "help") {
-     message.channel.sendMessage("`List of commands:` ```say, website``` `| More commands soon! |`");
+    message.channel.sendMessage("`List of commands:` ```say, website``` `| More commands soon! |`");
   }
   
   // list of shit
@@ -34,12 +34,13 @@ bot.on('message', message => {
   }
   
   if (command === "website") {
-     message.channel.sendMessage("Website: http://forums.mcservervote.net");
+    message.channel.sendMessage("Website: http://forums.mcservervote.net");
   }
   
   if (command === "games") {
-     message.channel.sendMessage("Games will release soon!");
+    message.channel.sendMessage("Games will release soon!");
   }
+  
 });
 
 bot.login(process.env.BOT_TOKEN);
