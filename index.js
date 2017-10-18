@@ -5,7 +5,7 @@ const config = require("./config.json");
 bot.on('ready', () => {
   console.log(`Logged in as ${bot.user.tag}!`);
 
-bot.user.setPresence({game: {name: '| prefix: !!help |', type:0 } });
+bot.user.setPresence({game: {name: '| prefix: ps.help |', type:0 } });
 });
  // Prefix settings
 bot.on('message', message => {
