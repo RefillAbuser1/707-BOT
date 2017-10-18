@@ -7,8 +7,6 @@ bot.on('ready', () => {
 
 bot.user.setPresence({game: {name: '| prefix: !!commands |', type:0 } });
 });
-
-this.status = bot.status || 'dnd';
  // Prefix settings
 bot.on('message', message => {
   if(message.author.bot) return;
