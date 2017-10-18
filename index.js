@@ -22,8 +22,8 @@ bot.on('message', message => {
     let total = numArry.reduce( (p, c) => p+c);
 
     message.channel.sendMessage(total);
-    
-  } 
+
+  }
   if (command === "help") {
      message.channel.sendMessage("`List of commands:` ```say, website``` `| More commands soon! |`");
   }
@@ -37,6 +37,9 @@ bot.on('message', message => {
      message.channel.sendMessage("Website: http://forums.mcservervote.net");
   }
   
+  if (command === "games") {
+     message.channel.sendMessage("Games will release soon!");
+  }
 });
 
 bot.login(process.env.BOT_TOKEN);
