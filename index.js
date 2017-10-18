@@ -38,7 +38,7 @@ bot.on('message', message => {
   }
   
   if (command === "nick") {
-      setName(name) {
+      setName(name)
     return this.edit({ name });
   }
     
