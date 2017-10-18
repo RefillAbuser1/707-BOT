@@ -25,7 +25,7 @@ bot.on('message', message => {
     
   } 
   if (command === "commands") {
-     message.channel.sendMessage("List of commands: ```say, support``` | More commands soon! |");
+     message.channel.sendMessage("List of commands: ```say, website``` | More commands soon! |");
   }
   // list of shit
   if (command === "say") {
@@ -34,10 +34,6 @@ bot.on('message', message => {
   
   if (command === "website") {
      message.channel.sendMessage("Website: http://forums.mcservervote.net");
-  }
-  
-  if (command === "support") {
-     message.channel.sendMessage("For `support` go to the #support text channel!");
   }
   
 });
