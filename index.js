@@ -27,6 +27,7 @@ bot.on('message', message => {
   if (command === "help") {
      message.channel.sendMessage("`List of commands:` ```say, website``` `| More commands soon! |`");
   }
+  
   // list of shit
   if (command === "say") {
     message.channel.sendMessage(args.join(" "));
