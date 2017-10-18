@@ -22,6 +22,7 @@ bot.on('message', message => {
     let total = numArry.reduce( (p, c) => p+c);
 
     message.channel.sendMessage(total);
+    
   } 
   if (command === "commands") {
      message.channel.sendMessage("List of commands: ```say, support``` | More commands soon! |");
