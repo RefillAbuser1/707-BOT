@@ -38,7 +38,7 @@ bot.on('message', message => {
   }
   // Welcomer
 bot.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.find('name', 'welcome');
+  const channel = member.guild.channels.find('name', 'bots');
   if (!channel) return;
   channel.send(`${member} Welcome to PlaySales!`);
 });
