@@ -36,12 +36,16 @@ bot.on('message', message => {
   if (command === "website") {
      message.channel.sendMessage("Website: http://forums.mcservervote.net");
   }
+
+exports.Status = {
+  READY: 0,
+  CONNECTING: 1,
+  RECONNECTING: 2,
+  IDLE: 3,
+  NEARLY: 4,
+  DISCONNECTED: 5,
+};
   
-  if (command === "nick") {
-      setName(name)
-    return this.edit({ name });
-  }
-    
 });
 
 bot.login(process.env.BOT_TOKEN);
