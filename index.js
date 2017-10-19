@@ -41,6 +41,10 @@ bot.on('message', message => {
     message.channel.sendMessage("Games will release soon!");
   }
   
+  get streaming() {
+   return this.type === 1;
+  }else
+  
 });
 
 bot.login(process.env.BOT_TOKEN);
