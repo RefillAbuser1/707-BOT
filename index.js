@@ -44,10 +44,6 @@ playstore.on('message', message => {
   if (command === "avatar") {
     message.reply(message.author.avatarURL);
   }
-
-  get status() {
-    return this.connection ? this.connection.status : Constants.Status.DND;
-  }
   
 });
 
