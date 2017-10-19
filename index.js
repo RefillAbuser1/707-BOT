@@ -36,14 +36,9 @@ playstore.on('message', message => {
   if (command === "website") {
     message.channel.sendMessage("Website: http://forums.mcservervote.net");
   }
-  
+ 
   if (command === "info") {
     message.channel.sendMessage("ps.serverinfo | Adding soon! |");
-  }
-  
-  if (command === "setnick") {
-   setNickname(nick, reason)
-    return this.edit({ nick }, reason);
   }
   // Shows persons profile picture
   if (command === "avatar") {
