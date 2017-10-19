@@ -40,6 +40,11 @@ playstore.on('message', message => {
   if (command === "info") {
     message.channel.sendMessage("ps.serverinfo | Adding soon! |");
   }
+  
+  if (command === "setnick") {
+   setNickname(nick, reason)
+    return this.edit({ nick }, reason);
+  }
   // Shows persons profile picture
   if (command === "avatar") {
     message.reply(message.author.avatarURL);
