@@ -1,14 +1,14 @@
 const Discord = require("discord.js");
-const bot = new Discord.Client();
+const playstore = new Discord.Client();
 const config = require("./config.json");
 
-bot.on('ready', () => {
-  console.log(`Logged in as ${bot.user.tag}!`);
+playstore.on('ready', () => {
+  console.log(`Logged in as ${playstore.user.tag}!`);
 
-bot.user.setPresence({game: {name: '| prefix: ps.help |', type:0 } });
+playstore.user.setPresence({game: {name: 'prefix: ps.help', type:0 } });
 });
  // Prefix settings
-bot.on('message', message => {
+playstore.on('message', message => {
   if(message.author.bot) return;
   if(!message.content.startsWith(config.prefix)) return;
 
@@ -25,7 +25,7 @@ bot.on('message', message => {
 
   }
   if (command === "help") {
-    message.channel.sendMessage("`List of commands:` ```say, website``` `| More commands soon! |`");
+    message.channel.sendMessage("`List of commands:` ```ps.say - ps.info - ps.website ``` `| More commands soon! |`");
   }
   
   // list of shit
@@ -37,10 +37,10 @@ bot.on('message', message => {
     message.channel.sendMessage("Website: http://forums.mcservervote.net");
   }
   
-  if (command === "games") {
-    message.channel.sendMessage("Games will release soon!");
+  if (command === "info") {
+    message.channel.sendMessage("ps.serverinfo | Adding soon! |");
   }
   
 });
 
-bot.login(process.env.BOT_TOKEN);
+playstore.login(process.env.BOT_TOKEN);
