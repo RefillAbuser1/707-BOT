@@ -40,6 +40,12 @@ bot.on('message', message => {
   if (command === "games") {
     message.channel.sendMessage("Games will release soon!");
   }
+  
+// Delete the message
+ message.delete("fuck, meow");
+  .then() // Success
+  .catch(console.error); // Log error
+  
 });
 
 bot.login(process.env.BOT_TOKEN);
