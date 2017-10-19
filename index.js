@@ -25,7 +25,7 @@ playstore.on('message', message => {
 
   }
   if (command === "help") {
-    message.channel.sendMessage("`List of commands:` ```ps.say - ps.info - ps.website ``` `| More commands soon! |`");
+    message.channel.sendMessage("``List of commands:`` ps.say - ps.info - ps.website);
   }
   
   // list of shit
