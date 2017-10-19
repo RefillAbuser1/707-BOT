@@ -25,7 +25,6 @@ playstore.on('message', message => {
 
   }
   if (command === "help") {
-    message.author.sendMessage("``List of commands:`` ps.say - ps.info - ps.website - ps.avatar");
     message.author.sendMessage("List of commands:");
     message.author.sendMessage("``ps.say (Says what you tell it to)``");
     message.author.sendMessage("``ps.info (updates pretty much)``");
