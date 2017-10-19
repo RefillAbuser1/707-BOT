@@ -32,6 +32,7 @@ playstore.on('message', message => {
     message.author.sendMessage("``ps.website (Says the website of playsales)``");
     message.author.sendMessage("``ps.avatar (Posts a pic of your profile pic)``");
     message.author.sendMessage("``ps.invite (Join my home discord server!)``");
+    message.author.sendMessage("``ps.ping (ping how fast the bot can respond)``");
     message.reply("I'm sending you the help list right now!");
   }
   
@@ -57,11 +58,12 @@ playstore.on('message', message => {
     message.reply("I hope you enjoy my home discord server!");
   }
   
-  if(command === "ping") {
 
-   const m = await message.channel.send("Ping?");
-   m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
-  }
+  
+  if(command === "ping") {
+   const m = await message.channel.send("Ping?");
+   m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
+  }
   
 });
 
