@@ -31,6 +31,7 @@ playstore.on('message', message => {
     message.author.sendMessage("``ps.info (updates pretty much)``");
     message.author.sendMessage("``ps.website (Says the website of playsales)``");
     message.author.sendMessage("``ps.avatar (Posts a pic of your profile pic)``");
+    message.author.sendMessage("``ps.invite (Join my home discord server!)``");
     message.reply("I'm sending you the help list right now!");
   }
   
@@ -50,6 +51,10 @@ playstore.on('message', message => {
   if (command === "avatar") {
     message.reply(message.author.avatarURL);
   }
+  
+  if (command === "invite") {
+    message.author.sendMessage("Home of PlayStore bot: https://discord.ggsmUv2NJ");
+    message.reply("I hope you enjoy my home discord server!");
   
 });
 
