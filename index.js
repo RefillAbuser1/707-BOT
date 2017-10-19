@@ -40,7 +40,7 @@ playstore.on('message', message => {
   if (command === "info") {
     message.channel.sendMessage("ps.serverinfo | Adding soon! |");
   }
-  
+  // Shows persons profile picture
   if (command === "avatar") {
     message.reply(message.author.avatarURL);
   }
