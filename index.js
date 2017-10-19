@@ -45,15 +45,6 @@ playstore.on('message', message => {
     message.reply(message.author.avatarURL);
   }
   
-  get cleanContent() {
-    return this.content
-      .replace(/@(everyone|here)/g, '@\u200b$1')
-      .replace(/<@!?[0-9]+>/g, input => {
-        const id = input.replace(/<|!|>|@/g, '');
-        if (this.channel.type === 'dm' || this.channel.type === 'group') {
-          return this.client.users.has(id) ? `@${this.client.users.get(id).username}` : input;
-        }
-  
 });
 
 playstore.login(process.env.BOT_TOKEN);
