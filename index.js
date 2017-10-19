@@ -4,6 +4,7 @@ const config = require("./config.json");
 
 playstore.on('ready', () => {
   console.log(`Logged in as ${playstore.user.tag}!`);
+  console.log(`PlayStores is online`);
 
 playstore.user.setPresence({game: {name: 'prefix: ps.help | Watching: Netflix', type:0 } });
 });
