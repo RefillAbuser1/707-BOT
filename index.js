@@ -46,7 +46,7 @@ playstore.on('message', message => {
   }
 
   get status() {
-    return this.connection ? this.connection.status : Constants.Status.dnd;
+    return this.connection ? this.connection.status : Constants.Status.DND;
   }
   
 });
