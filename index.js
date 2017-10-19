@@ -5,7 +5,7 @@ const config = require("./config.json");
 playstore.on('ready', () => {
   console.log(`Logged in as ${playstore.user.tag}!`);
 
-playstore.user.setPresence({game: {name: 'prefix: ps.help', type:0 } });
+playstore.user.setPresence({game: {name: 'prefix: ps.help | Watching: Netflix', type:0 } });
 });
  // Prefix settings
 playstore.on('message', message => {
