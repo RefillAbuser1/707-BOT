@@ -41,6 +41,11 @@ playstore.on('message', message => {
     message.channel.sendMessage("ps.serverinfo | Adding soon! |");
   }
   
+playstore.on('message', message => {
+  if (command=== "avatar") {
+    message.reply(message.author.avatarURL);
+  }
+  
 });
 
 playstore.login(process.env.BOT_TOKEN);
