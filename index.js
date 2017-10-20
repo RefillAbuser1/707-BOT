@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const playstore = new Discord.Client();
 const config = require("./config.json");
+const music = require('discord.js-music');
 
 playstore.on('ready', () => {
   console.log(`Bot has started, with ${playstore.users.size} users, in ${playstore.channels.size} channels of ${playstore.guilds.size} guilds.`);
