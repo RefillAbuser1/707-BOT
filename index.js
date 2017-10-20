@@ -3,11 +3,11 @@ const playstore = new Discord.Client();
 const config = require("./config.json");
 
 playstore.on('ready', () => {
-  console.log(`Bot has started, {playsales.guilds.size}`);
+  console.log(`Bot has started, with ${playstore.users.size} users, in ${playstore.channels.size} channels of ${playstore.guilds.size} guilds.`);
   console.log(`Logged in as ${playstore.user.tag}!`);
   console.log(`PlayStores is online`);
 
-playstore.user.setPresence({game: {name: 'prefix: ps.help | playsales.user.setGame(`on ${client.guilds.size} servers`);', type:0 } });
+playstore.user.setPresence({game: {name: 'prefix: ps.help | playstore.user.setGame(`on ${playstore.guilds.size} servers`);', type:0 } });
 });
  // Prefix settings
 playstore.on('message', message => {
