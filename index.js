@@ -3,7 +3,7 @@ const playstore = new Discord.Client();
 const config = require("./config.json");
 
 playstore.on('ready', () => {
-  console.log(`Bot has started, with ${playsales.users.size} users, in ${playsales.channels.size} channels of ${playsales.guilds.size} guilds.`);
+  console.log(`Bot has started, ${playsales.channels.size} channels of ${playsales.guilds.size} guilds.`);
   console.log(`Logged in as ${playstore.user.tag}!`);
   console.log(`PlayStores is online`);
 
