@@ -58,14 +58,11 @@ playstore.on('message', message => {
     message.reply("I hope you enjoy my home discord server!");
   }
  
-// Create an event listener for new guild members
 playstore.on('guildMemberAdd', member => {
-  // Send the message to a designated channel on a server:
   const channel = member.guild.channels.find('name', 'bots');
-  // Do nothing if the channel wasn't found on this server
   if (!channel) return;
-  // Send the message, mentioning the member
-  channel.send(`Welcome to the server, ${member}`);
+  message.channel.sendMessage("Welcome to PlaySales!");
+  message.author.sendMessage("Hi, I am the PlaySales bot. Do ps.help in the #bots on PlaySales text channel <3");
 });
   
 });
