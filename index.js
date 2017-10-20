@@ -64,9 +64,10 @@ playstore.on('message', message => {
   if (message.content.startsWith('ps.play')) {
     const voiceChannel = message.member.voiceChannel;
     if (!voiceChannel) return message.reply(`Please be in a voice channel first!`);
+    if (voiceChannel) message.reply(`I am in the channel!`);
     voiceChannel.join()
       .then(connnection => {
-        connection.playArbitraryInput(sr);
+        connection.playFile()
         const dispatcher = connnection.playStream(stream);
         dispatcher.on('end', () => voiceChannel.leave());
       });
