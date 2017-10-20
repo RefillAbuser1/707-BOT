@@ -58,20 +58,12 @@ playstore.on('message', message => {
     message.author.sendMessage("Home of PlaySales bot: https://discord.gg/smUv2NJ");
     message.reply("I hope you enjoy my home discord server!");
   }
-  
-playstore.on('message', message => {
-  if (message.content.startsWith('++play')) {
-    const voiceChannel = message.member.voiceChannel;
-    if (!voiceChannel) return message.reply(`Please be in a voice channel first!`);
-    voiceChannel.join()
-      .then(connnection => {
-        const stream = ytdl("https://www.youtube.com/watch?v=dQw4w9WgXcQ", { filter: 'audioonly' });
-        const dispatcher = connnection.playStream(stream);
-        dispatcher.on('end', () => voiceChannel.leave());
-      });
+
+  if(command === "ping") {
+    const m = await message.channel.send("Ping?");
+    m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
   }
-});
-  
+ 
 });
 
 playstore.login(process.env.BOT_TOKEN);
