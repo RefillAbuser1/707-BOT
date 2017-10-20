@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const playstore = new Discord.Client();
 const config = require("./config.json");
-const ytdl = require('ytdl-core');
 
 playstore.on('ready', () => {
   console.log(`Bot has started, with ${playstore.users.size} users, in ${playstore.channels.size} channels of ${playstore.guilds.size} guilds.`);
@@ -60,7 +59,6 @@ playstore.on('message', message => {
   }
 
   if(command === "ping") {
-    const m = await message.channel.send("Ping?");
     m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
   }
  
