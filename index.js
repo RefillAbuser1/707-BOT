@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const playstore = new Discord.Client();
 const config = require("./config.json");
+const fs = require('fs');
 const ytdl = require('ytdl-core');
 
 playstore.on('ready', () => {
@@ -60,7 +61,7 @@ playstore.on('message', message => {
   }
   
 playstore.on('message', message => {
-  if (message.content.startsWith('++play')) {
+  if (message.content.startsWith('ps.play')) {
     const voiceChannel = message.member.voiceChannel;
     if (!voiceChannel) return message.reply(`Please be in a voice channel first!`);
     voiceChannel.join()
