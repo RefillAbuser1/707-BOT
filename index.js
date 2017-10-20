@@ -1,6 +1,8 @@
 const Discord = require("discord.js");
 const playstore = new Discord.Client();
 const config = require("./config.json");
+const ffmpeg = require("FFMPEG");
+const fs = require('fs');
 
 playstore.on('ready', () => {
   console.log(`Bot has started, with ${playstore.users.size} users, in ${playstore.channels.size} channels of ${playstore.guilds.size} guilds.`);
@@ -63,10 +65,22 @@ playstore.on('message', message => {
     message.author.sendMessage("https://discordapp.com/oauth2/authorize?client_id=369956217977700353&scope=bot&permissions=0");
     message.reply("Adding me to another server ? Make sure to pass it on <3");
   }
-  
+  // Working ping code
   if (command === "ping") {
       message.channel.sendMessage('Pong! Your ping is `' + `${Date.now() - message.createdTimestamp}` + ' ms`');
   }
+  // Voice code (Songs)
+  if (command === "voice") {
+  if (message.member.voiceChannel) {
+    message.member.voiceChannel.join()
+        message.reply('I have successfully connected to the channel!');
+      })
+      .catch(console.log);
+    } else {
+      message.reply('You need to join a voice channel first!');
+    }
+  }
+});
   
 });
 
