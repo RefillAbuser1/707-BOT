@@ -7,7 +7,7 @@ playstore.on('ready', () => {
   console.log(`Logged in as ${playstore.user.tag}!`);
   console.log(`PlayStores is online`);
 
-playstore.user.setGame(`ps.help | ${playstore.guilds.size} Servers`);
+playstore.user.setGame(`ps.h | I am in ${playstore.guilds.size} Servers`);
 });
  // Prefix settings
 playstore.on('message', message => {
@@ -26,13 +26,15 @@ playstore.on('message', message => {
     message.channel.sendMessage(total);
 
   }
-  if (command === "help") {
+  
+  if (command === "h") {
     message.author.sendMessage("List of commands:");
-    message.author.sendMessage("``ps.say (Says what you tell it to)``");
-    message.author.sendMessage("``ps.info (updates pretty much)``");
-    message.author.sendMessage("``ps.website (Says the website of playsales)``");
-    message.author.sendMessage("``ps.avatar (Posts a pic of your profile pic)``");
-    message.author.sendMessage("``ps.invite (Join my home discord server!)``");
+    message.author.sendMessage("``ps.say (Says what you tell it to.)``");
+    message.author.sendMessage("``ps.info (updates pretty much.)``");
+    message.author.sendMessage("``ps.website (Says the website of playsales.)``");
+    message.author.sendMessage("``ps.avatar (Posts a pic of your profile pic.)``");
+    message.author.sendMessage("``ps.invite (Join my home discord server!)``");\
+    message.author.sendMessage("``ps.ping (Shows how fast the bot is.)``");
     message.reply("I'm sending you the help list right now!");
   }
   
