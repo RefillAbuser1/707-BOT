@@ -70,12 +70,16 @@ playstore.on('message', message => {
       message.channel.sendMessage('Pong! Your ping is `' + `${Date.now() - message.createdTimestamp}` + ' ms`');
   }
   // Voice code (Songs)
-  if (command === "voice") {
-  if (message.member.voiceChannel) {
-    message.member.voiceChannel.join()
-        message.reply('I have successfully connected to the channel!');
-      })
-      .catch(console.log);
+playstore.on('message', message => {
+  if (!message.guild) return;
+
+  if (message.content === '/join') {
+    if (message.member.voiceChannel) {
+      message.member.voiceChannel.join()
+        .then(connection => {
+          message.reply('I have successfully connected to the channel!');
+        })
+        .catch(console.log);
     } else {
       message.reply('You need to join a voice channel first!');
     }
@@ -83,5 +87,5 @@ playstore.on('message', message => {
 });
   
 });
-
+// Token for bot to run
 playstore.login(process.env.BOT_TOKEN);
