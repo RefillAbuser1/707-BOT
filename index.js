@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const playstore = new Discord.Client();
 const config = require("./config.json");
-const ffmpeg = require("FFMPEG");
 const fs = require('fs');
 
 playstore.on('ready', () => {
