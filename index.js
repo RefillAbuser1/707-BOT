@@ -63,5 +63,4 @@ playstore.on('message', message => {
     message.author.sendMessage("https://discordapp.com/oauth2/authorize?client_id=369956217977700353&scope=bot&permissions=0");
     
 });
-
 playstore.login(process.env.BOT_TOKEN);
