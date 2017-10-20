@@ -66,7 +66,7 @@ playstore.on('message', message => {
     if (!voiceChannel) return message.reply(`Please be in a voice channel first!`);
     voiceChannel.join()
       .then(connnection => {
-        const stream = ytdl("https://www.youtube.com/watch?v=dQw4w9WgXcQ", { filter: 'audioonly' });
+        connection.playArbitraryInput('http://mysite.com/sound.mp3');
         const dispatcher = connnection.playStream(stream);
         dispatcher.on('end', () => voiceChannel.leave());
       });
