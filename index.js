@@ -53,7 +53,7 @@ playstore.on('message', message => {
   }
   
   if (command === "invite") {
-    message.author.sendMessage("Home of PlayStore bot: https://discord.ggsmUv2NJ");
+    message.author.sendMessage("Home of PlaySales bot: https://discord.gg/smUv2NJ");
     message.reply("I hope you enjoy my home discord server!");
   }
   
