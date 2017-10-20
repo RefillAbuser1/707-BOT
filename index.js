@@ -7,7 +7,7 @@ playstore.on('ready', () => {
   console.log(`Logged in as ${playstore.user.tag}!`);
   console.log(`PlayStores is online`);
 
-playstore.user.setGame(`ps.help | ${playstore.guilds.size} servers`);
+playstore.user.setGame(`ps.help | ${playstore.guilds.size} Servers`);
 });
  // Prefix settings
 playstore.on('message', message => {
@@ -32,7 +32,8 @@ playstore.on('message', message => {
     message.author.sendMessage("``ps.info (updates pretty much)``");
     message.author.sendMessage("``ps.website (Says the website of playsales)``");
     message.author.sendMessage("``ps.avatar (Posts a pic of your profile pic)``");
-    message.author.sendMessage("``ps.invite (Join my home discord server!)``");
+    message.author.sendMessage("``ps.support (Need support ? Join here !)``");
+    message.author.sendMessage("``ps.invite (Let me join your server!)``");
     message.reply("I'm sending you the help list right now!");
   }
   
@@ -53,18 +54,13 @@ playstore.on('message', message => {
     message.reply(message.author.avatarURL);
   }
   
-  if (command === "invite") {
-    message.author.sendMessage("Home of PlaySales bot: https://discord.gg/smUv2NJ");
+  if (command === "support") {
+    message.author.sendMessage("for support join > https://discord.gg/smUv2NJ <");
     message.reply("I hope you enjoy my home discord server!");
   }
- 
-playstore.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.find('name', 'bots');
-  if (!channel) return;
-  message.channel.sendMessage("Welcome to PlaySales!");
-  message.author.sendMessage("Hi, I am the PlaySales bot. Do ps.help in the #bots on PlaySales text channel <3");
-});
   
+  if (command === "invite") {
+    message.author.sendMessage("https://discordapp.com/oauth2/authorize?client_id=369956217977700353&scope=bot&permissions=0");
 });
 
 playstore.login(process.env.BOT_TOKEN);
