@@ -32,8 +32,7 @@ playstore.on('message', message => {
     message.author.sendMessage("``ps.info (updates pretty much)``");
     message.author.sendMessage("``ps.website (Says the website of playsales)``");
     message.author.sendMessage("``ps.avatar (Posts a pic of your profile pic)``");
-    message.author.sendMessage("``ps.support (Need support ? Join here !)``");
-    message.author.sendMessage("``ps.invite (Let me join your server!)``");
+    message.author.sendMessage("``ps.invite (Join my home discord server!)``");
     message.reply("I'm sending you the help list right now!");
   }
   
@@ -54,13 +53,11 @@ playstore.on('message', message => {
     message.reply(message.author.avatarURL);
   }
   
-  if (command === "support") {
-    message.author.sendMessage("for support join > https://discord.gg/smUv2NJ <");
+  if (command === "invite") {
+    message.author.sendMessage("Home of PlaySales bot: https://discord.gg/smUv2NJ");
     message.reply("I hope you enjoy my home discord server!");
   }
   
-  if (command === "invite") {
-    message.author.sendMessage("https://discordapp.com/oauth2/authorize?client_id=369956217977700353&scope=bot&permissions=0");
-    
 });
+
 playstore.login(process.env.BOT_TOKEN);
