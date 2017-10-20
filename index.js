@@ -70,12 +70,15 @@ playstore.on('message', message => {
   }
   // Voice code (Songs)
 playstore.on('message', message => {
+  // Voice only works in guilds, if the message does not come from a guild,
+  // we ignore it
   if (!message.guild) return;
 
   if (command === "voice") {
+    // Only try to join the sender's voice channel if they are in one themselves
     if (message.member.voiceChannel) {
       message.member.voiceChannel.join()
-        .then(connection => {
+        .then(connection => { // Connection is an instance of VoiceConnection
           message.reply('I have successfully connected to the channel!');
         })
         .catch(console.log);
