@@ -59,7 +59,7 @@ playstore.on('message', message => {
   }
  
 playstore.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.find('name', 'welcome');
+  const channel = member.guild.channels.find('name', 'bots');
   if (!channel) return;
   message.channel.sendMessage("Welcome to PlaySales!");
   message.author.sendMessage("Hi, I am the PlaySales bot. Do ps.help in the #bots on PlaySales text channel <3");
