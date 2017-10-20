@@ -7,7 +7,7 @@ playstore.on('ready', () => {
   console.log(`Logged in as ${playstore.user.tag}!`);
   console.log(`PlayStores is online`);
 
-playstore.user.setPresence({game: {name: 'prefix: ps.help | ${playstore.users.size} users, in ${playstore.channels.size} channels of ${playstore.guilds.size} guilds.`);', type:0 } });
+playstore.user.setGame(`on ${client.guilds.size} servers`);
 });
  // Prefix settings
 playstore.on('message', message => {
