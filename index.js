@@ -61,6 +61,11 @@ playstore.on('message', message => {
     message.author.sendMessage("https://discordapp.com/oauth2/authorize?client_id=369956217977700353&scope=bot&permissions=0");
     message.reply("Adding me to another server ? Make sure to pass it on <3");
   }
+  
+  if (command === "ping") {
+      message.channel.sendMessage('Pong! Your ping is `' + `${Date.now() - message.createdTimestamp}` + ' ms`');
+  }
+  
 });
 
 playstore.login(process.env.BOT_TOKEN);
