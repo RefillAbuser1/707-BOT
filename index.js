@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const playstore = new Discord.Client();
 const config = require("./config.json");
+const ytdl = require('ytdl-core');
 
 playstore.on('ready', () => {
   console.log(`Bot has started, with ${playstore.users.size} users, in ${playstore.channels.size} channels of ${playstore.guilds.size} guilds.`);
@@ -57,6 +58,19 @@ playstore.on('message', message => {
     message.author.sendMessage("Home of PlaySales bot: https://discord.gg/smUv2NJ");
     message.reply("I hope you enjoy my home discord server!");
   }
+  
+playstore.on('message', message => {
+  if (message.content.startsWith('++play')) {
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) return message.reply(`Please be in a voice channel first!`);
+    voiceChannel.join()
+      .then(connnection => {
+        const stream = ytdl("https://www.youtube.com/watch?v=dQw4w9WgXcQ", { filter: 'audioonly' });
+        const dispatcher = connnection.playStream(stream);
+        dispatcher.on('end', () => voiceChannel.leave());
+      });
+  }
+});
   
 });
 
