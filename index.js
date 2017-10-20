@@ -53,11 +53,13 @@ playstore.on('message', message => {
     message.reply(message.author.avatarURL);
   }
   
-  if (command === "invite") {
-    message.author.sendMessage("Home of PlaySales bot: https://discord.gg/smUv2NJ");
-    message.reply("I hope you enjoy my home discord server!");
+  if (command === "support") {
+    message.author.sendMessage("Join for support: https://discord.gg/smUv2NJ");
   }
   
+  if (command === "invite") {
+    message.author.sendMessage("https://discordapp.com/oauth2/authorize?client_id=369956217977700353&scope=bot&permissions=0");
+  }
 });
 
 playstore.login(process.env.BOT_TOKEN);
