@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const playstore = new Discord.Client();
 const config = require("./config.json");
-const fs = require('fs');
 const ytdl = require('ytdl-core');
 
 playstore.on('ready', () => {
@@ -60,24 +59,13 @@ playstore.on('message', message => {
     message.reply("I hope you enjoy my home discord server!");
   }
   
-  if(command === "purge") {
-    const deleteCount = parseInt(args[0], 10);
-    if(!deleteCount || deleteCount < 2 || deleteCount > 100)
-     return message.reply("Please provide a number between 2 and 100 for the number of messages to delete");
-    
-    const fetched = await message.channel.fetchMessages({count: deleteCount});
-    message.channel.bulkDelete(fetched)
-      .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
-  }
-  
 playstore.on('message', message => {
-  if (message.content.startsWith('ps.play')) {
+  if (message.content.startsWith('++play')) {
     const voiceChannel = message.member.voiceChannel;
     if (!voiceChannel) return message.reply(`Please be in a voice channel first!`);
-    if (voiceChannel) message.reply(`I am in the channel!`);
     voiceChannel.join()
       .then(connnection => {
-        connection.playFile()
+        const stream = ytdl("https://www.youtube.com/watch?v=dQw4w9WgXcQ", { filter: 'audioonly' });
         const dispatcher = connnection.playStream(stream);
         dispatcher.on('end', () => voiceChannel.leave());
       });
