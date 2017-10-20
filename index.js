@@ -46,7 +46,7 @@ playstore.on('message', message => {
   }
   
   if (command === "website") {
-    message.channel.sendMessage("Website: http://forums.mcservervote.net");
+    message.channel.sendMessage("Website: http://thegaming.services");
   }
  
   if (command === "info") {
