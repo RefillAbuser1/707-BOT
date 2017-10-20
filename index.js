@@ -7,7 +7,7 @@ playstore.on('ready', () => {
   console.log(`Logged in as ${playstore.user.tag}!`);
   console.log(`PlayStores is online`);
 
-playstore.user.setGame(`ps.h | I am in ${playstore.guilds.size} Servers`);
+playstore.user.setGame(`ps.h | I am in ${playstore.guilds.size} Servers | ps.invite`);
 });
  // Prefix settings
 playstore.on('message', message => {
