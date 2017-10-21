@@ -65,7 +65,7 @@ playstore.on('message', message => {
   }
   // Working ping code
   if (command === "ping") {
-      message.channel.sendMessage('Pong! Your ping is `' + `${Date.now() - message.createdTimestamp}` + ' ms`');
+      message.channel.sendMessage("You abused it to much. Staff only command");
   }
   
 });
