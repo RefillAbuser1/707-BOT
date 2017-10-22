@@ -69,7 +69,7 @@ playstore.on('message', message => {
      if(message.member.roles.has(modRole.id)) {
       message.channel.sendMessage('Pong! Your ping is `' + `${Date.now() - message.createdTimestamp}` + ' ms`');
      } else {
-      message.reply("Need a role created called (BotTrusted) and have it assigned to you!")
+      message.reply("Need a role created called (BotTrusted) and have it assigned to you!");
     }
   }
   
