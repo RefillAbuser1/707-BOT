@@ -63,13 +63,15 @@ playstore.on('message', message => {
     message.author.sendMessage("https://discordapp.com/oauth2/authorize?client_id=369956217977700353&scope=bot&permissions=0");
     message.reply("Adding me to another server ? Make sure to pass it on <3");
   }
-  // Ping Permission for supporter
+  // Working ping code for staff
   if (command === "ping") {
      let modRole = message.guild.roles.find("name", "BotTrusted");
      if(message.member.roles.has(modRole.id)) {
       message.channel.sendMessage('Pong! Your ping is `' + `${Date.now() - message.createdTimestamp}` + ' ms`');
      } else {
-      message.reply("Need a role created called (BotTrusted) and assigned to you!");
+      message.reply("Need a role created called (BotTrusted) and have it assigned to you!")
+    }
+  }
   
 });
 // Token for bot to run
