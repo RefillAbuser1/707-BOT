@@ -65,11 +65,11 @@ playstore.on('message', message => {
   }
   // Working ping code
   if (command === "ping") {
-     let modRole = message.guild.roles.find("name", "BotTrusted");
+     let modRole = message.guild.roles.find("name", "BOTCOMMANDER");
      if(message.member.roles.has(modRole.id)) {
       message.channel.sendMessage('Pong! Your ping is `' + `${Date.now() - message.createdTimestamp}` + ' ms`');
      } else {
-      message.reply("Need a role created called (BotTrusted) and have it assigned to you!")
+      message.reply("Need a role created called (BOTCOMMANDER) and have it assigned to you!");
     }
   }
   
