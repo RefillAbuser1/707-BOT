@@ -65,7 +65,7 @@ playstore.on('message', message => {
   }
   // Working ping code
   if (command === "ping") {
-     let modRole = message.guild.roles.find("name", "Bot Trusted");
+     let modRole = message.guild.roles.find("name", "BotTrusted");
      if(message.member.roles.has(modRole.id)) {
       message.channel.sendMessage('Pong! Your ping is `' + `${Date.now() - message.createdTimestamp}` + ' ms`');
      } else {
