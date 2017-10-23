@@ -73,7 +73,7 @@ playstore.on('message', message => {
     }
   }
 // Welcomeer code
-client.on('guildMemberAdd', member => {
+playstore.on('guildMemberAdd', member => {
   const channel = member.guild.channels.find('name', 'bots');
   if (!channel) return;
   channel.send(`${member}, Welcome. Enjoy your stay at PlaySales!`);
