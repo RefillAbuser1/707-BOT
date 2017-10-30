@@ -72,12 +72,6 @@ playstore.on('message', message => {
       message.reply("Need a role called (BOTCOMMANDER) assiged to you! (Contact server owner)");
     }
   }
-// Welcomeer code
-playstore.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.find('name', 'bots');
-  if (!channel) return;
-  channel.send(`${member}, Welcome. Enjoy your stay at PlaySales!`);
-});
   
 });
 // Token for bot to run
